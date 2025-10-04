@@ -1,0 +1,6 @@
+flask
+yfinance
+matplotlib
+schedule
+pandas
+openai
