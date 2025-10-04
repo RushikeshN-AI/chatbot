@@ -12,9 +12,11 @@ def index():
     chart_file = ""
     if request.method == "POST":
         question = request.form["question"]
+        print(f"[DEBUG] User asked: {question}")
         data = fetch_stock_data("AAPL")
         chart_file = plot_stock(data, "AAPL")
         response = ask_bot(question, data)
+        print(f"[DEBUG] Bot response: {response}")
     return render_template("index.html", response=response, chart=chart_file)
 
 def update_data():
