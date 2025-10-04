@@ -33,4 +33,5 @@ def run_scheduler():
 threading.Thread(target=run_scheduler, daemon=True).start()
 
 if __name__ == "__main__":
+    print("Template folder:", app.template_folder)
     app.run(debug=True)
